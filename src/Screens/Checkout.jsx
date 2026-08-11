@@ -53,7 +53,7 @@ const Checkout = () => {
         <Image source={require('../assets/images/pic16.png')} />
         <Text style={styles.title4}>*** **** **** 3461</Text>
       </TouchableOpacity>
-      
+
       <View style={styles.step4Con}>
         <TouchableOpacity onPress={() => setPayment(true)} style={styles.step4}>
           <Text style={styles.title5}>Payment</Text>
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     marginTop: 25,
     shadowOpacity: 0.3,
-    shadowOffset:{width:0.3,height:0.3}
+    shadowOffset: { width: 0.3, height: 0.3 }
 
   },
   step2: {

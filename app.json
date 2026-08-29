@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Fastfood",
-    "slug": "Fastfood",
+    "slug": "owooluwaabass",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
@@ -20,15 +20,17 @@
         "foregroundImage": "./src/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.victor_abass.de_king_spice"
     },
     "web": {
       "favicon": "./src/assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "2bfe9ec1-9131-425f-bdbd-bf9cd0408dcd"
+        "projectId": "0877a635-481b-404b-89e4-3ca7ba61f25b"
       }
-    }
+    },
+    "owner": "devvics-team"
   }
 }

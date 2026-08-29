@@ -12,7 +12,7 @@ const Bugerking = () => {
     const Burger = [
         {
             id: '1',
-            image: require('../assets/images/Burger1.jpg'),
+            image: require('../assets/images/Burger1.png'),
             title: 'Double cheese\nBurger',
             price: '#6,000'
         },
@@ -24,7 +24,7 @@ const Bugerking = () => {
         },
         {
             id: '3',
-            image: require('../assets/images/Burger5.jpg'),
+            image: require('../assets/images/Burger5.png'),
             title: 'Veggie Burger',
             price: '#4,000'
         },

@@ -3,52 +3,52 @@ import React, { useState } from 'react'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 import SimpleLineIcons from '@expo/vector-icons/SimpleLineIcons';
 import { useNavigation } from '@react-navigation/native'
-import * as Location from 'expo-location'
+// import * as Location from 'expo-location'
 import Back from '../components/Back'
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 const Deliveryaddress = () => {
     const navigation = useNavigation();
-    const [addressText, setAddressText] = useState('');
-    const [loading, setLoading] = useState(false);
-    const [errorMsg, setErrorMsg] = useState('');
+    // const [addressText, setAddressText] = useState('');
+    // const [loading, setLoading] = useState(false);
+    // const [errorMsg, setErrorMsg] = useState('');
 
-    const handleUseCurrentLocation = async () => {
-        setLoading(true);
-        setErrorMsg('');
+    // const handleUseCurrentLocation = async () => {
+    //     setLoading(true);
+    //     setErrorMsg('');
 
-        try {
-            const { status } = await Location.requestForegroundPermissionsAsync();
+    //     try {
+    //         const { status } = await Location.requestForegroundPermissionsAsync();
 
-            if (status !== 'granted') {
-                setErrorMsg('Location permission denied');
-                setLoading(false);
-                return;
-            }
+    //         if (status !== 'granted') {
+    //             setErrorMsg('Location permission denied');
+    //             setLoading(false);
+    //             return;
+    //         }
 
-            const currentLocation = await Location.getCurrentPositionAsync({
-                accuracy: Location.Accuracy.High,
-            });
+    //         const currentLocation = await Location.getCurrentPositionAsync({
+    //             accuracy: Location.Accuracy.High,
+    //         });
 
-            const geocodedAddress = await Location.reverseGeocodeAsync({
-                latitude: currentLocation.coords.latitude,
-                longitude: currentLocation.coords.longitude,
-            });
+    //         const geocodedAddress = await Location.reverseGeocodeAsync({
+    //             latitude: currentLocation.coords.latitude,
+    //             longitude: currentLocation.coords.longitude,
+    //         });
 
-            if (geocodedAddress[0]) {
-                const place = geocodedAddress[0];
-                const fullAddress = `${place.street || place.name || ''}, ${place.city || ''}, ${place.region || ''}, ${place.country || ''}`.replace(/, +/g, ', ').replace(/^, |, $/g, '');
-                setAddressText(fullAddress);
-            } else {
-                setAddressText('Unable to find address');
-            }
-        } catch (error) {
-            console.log(error);
-            setErrorMsg('Unable to get your current location');
-        } finally {
-            setLoading(false);
-        }
-    };
+    //         if (geocodedAddress[0]) {
+    //             const place = geocodedAddress[0];
+    //             const fullAddress = `${place.street || place.name || ''}, ${place.city || ''}, ${place.region || ''}, ${place.country || ''}`.replace(/, +/g, ', ').replace(/^, |, $/g, '');
+    //             setAddressText(fullAddress);
+    //         } else {
+    //             setAddressText('Unable to find address');
+    //         }
+    //     } catch (error) {
+    //         console.log(error);
+    //         setErrorMsg('Unable to get your current location');
+    //     } finally {
+    //         setLoading(false);
+    //     }
+    // };
 
     return (
         <SafeAreaProvider>
@@ -63,14 +63,14 @@ const Deliveryaddress = () => {
                 <View style={styles.step1}>
                     <SimpleLineIcons name="flag" size={24} color="black" />
                     <TextInput
-                        value={addressText}
-                        onChangeText={setAddressText}
+                        // value={addressText}
+                        // onChangeText={setAddressText}
                         placeholder='Search for streets, cities, districts.'
                         placeholderTextColor={'#555252'}
                     />
                 </View>
 
-                <TouchableOpacity onPress={handleUseCurrentLocation} style={styles.step2}>
+                <TouchableOpacity style={styles.step2}>
                     <View style={styles.step2Sub}>
                         <Image source={require('../assets/icons/Star1.png')} style={styles.Star1} />
                     </View>
@@ -78,7 +78,7 @@ const Deliveryaddress = () => {
                         Use current location
                     </Text>
                 </TouchableOpacity>
-
+{/* 
                 {loading ? (
                     <View style={styles.loaderContainer}>
                         <ActivityIndicator size="small" color="#045a31" />
@@ -86,7 +86,7 @@ const Deliveryaddress = () => {
                     </View>
                 ) : null}
 
-                {errorMsg ? <Text style={styles.errorText}>{errorMsg}</Text> : null}
+                {errorMsg ? <Text style={styles.errorText}>{errorMsg}</Text> : null} */}
 
                 <View style={styles.step3Con}>
                     <View style={styles.step3}>

@@ -35,17 +35,17 @@ const Product = () => {
         },
         {
             id: '2',
-            image: require('../assets/images/Pizza.png'),
+            image: require('../assets/images/Pizza11.jpg'),
             title: 'Dominos Pizza'
         },
         {
             id: '3',
-            image: require('../assets/images/Kfc.png'),
+            image: require('../assets/images/KfC11.jpg'),
             title: 'KFC'
         },
         {
             id: '4',
-            image: require('../assets/images/Burger.png'),
+            image: require('../assets/images/Burger11.png'),
             title: 'Buger King'
         },
     ]

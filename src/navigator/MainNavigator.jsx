@@ -14,6 +14,8 @@ import KFC from '../Screens/KFC';
 import Chaipurchase from '../Screens/Chaipurchase';
 import Pizzapurchase from '../Screens/Pizzapurchase';
 import KFCpurchase from '../Screens/KFCpurchase';
+import Beanspurchase from '../Screens/Beanspurchase';
+import Thaiwanpurchase from '../Screens/Thaiwanpurchase';
 const MainNavigator = () => {
     const Stack = createNativeStackNavigator();
     return (
@@ -31,6 +33,8 @@ const MainNavigator = () => {
             <Stack.Screen name='Chaipurchase' component={Chaipurchase} />
             <Stack.Screen name='Pizzapurchase' component={Pizzapurchase} />
             <Stack.Screen name='KFCpurchase' component={KFCpurchase} />
+            <Stack.Screen name='Beanspurchase' component={Beanspurchase} />
+            <Stack.Screen name='Thaiwanpurchase' component={Thaiwanpurchase} />
         </Stack.Navigator>
     )
 }

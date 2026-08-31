@@ -26,7 +26,15 @@ const Product = () => {
             navigation.navigate('Bugerking')
         }
     }
-
+const handleWhere =(id, itemData) => {
+    console.log ('Pressed item with id:',id, 'Data:', itemData);
+    if (id === '1'){
+        navigation.navigate('Beanspurchase', itemData);
+    }
+    else if (id=='2') {
+        navigation.navigate ('Thaiwanpurchase', itemData)
+    }
+}
     const Data = [
         {
             id: '1',
@@ -53,7 +61,7 @@ const Product = () => {
     const Burger = [
         {
             id: '1',
-            image: require('../assets/images/food1.png'),
+            image: require('../assets/images/food5.png'),
             title: 'Special Fried Rice with \n  Black Beans Sauce',
             price: '#24,000'
         },
@@ -126,7 +134,7 @@ const Product = () => {
             <Text style={styles.title2}>{item.title}</Text>
             <Image source={item.image} style={styles.food} />
             <Text style={styles.title3}>{item.price}</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('Doublecheese', { image: item.image, title: item.title, price: item.price })} activeOpacity={0.7} style={styles.step4}>
+            <TouchableOpacity onPress={() => handleWhere(item.id, { image: item.image, title: item.title, price: item.price })} activeOpacity={0.7} style={styles.step4}>
                 <Image source={require('../assets/images/cross.png')} />
             </TouchableOpacity>
 
@@ -252,7 +260,11 @@ const styles = StyleSheet.create({
     food: {
         position: 'absolute',
         left: -30,
-        bottom: 50
+        bottom: 50,
+         width: 178,
+        height: 178,
+        borderRadius: 50,
+
     },
     title3: {
         position: 'absolute',

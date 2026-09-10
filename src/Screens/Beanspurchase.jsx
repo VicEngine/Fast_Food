@@ -16,17 +16,17 @@ const Beanspurchase = () => {
     const Pizza = [
         {
             id: '1',
-            image: require('../assets/images/food5.png'),
+            image: require('../assets/images/food5.jpg'),
             title: 'Margherita'
         },
         {
             id: '2',
-            image: require('../assets/images/food4.png'),
+            image: require('../assets/images/food4.jpg'),
             title: 'Pepperoni'
         },
         {
             id: '3',
-            image: require('../assets/images/food8.png'),
+            image: require('../assets/images/food3.jpg'),
             title: 'Quattro Stagioni'
         },
     ]

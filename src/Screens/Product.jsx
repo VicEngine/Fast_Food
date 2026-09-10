@@ -61,13 +61,13 @@ const handleWhere =(id, itemData) => {
     const Burger = [
         {
             id: '1',
-            image: require('../assets/images/food5.png'),
+            image: require('../assets/images/food5.jpg'),
             title: 'Special Fried Rice with \n  Black Beans Sauce',
             price: '#24,000'
         },
         {
             id: '2',
-            image: require('../assets/images/food2.png'),
+            image: require('../assets/images/food2.jpg'),
             title: 'Thaiwan',
             price: '#20,000'
         },

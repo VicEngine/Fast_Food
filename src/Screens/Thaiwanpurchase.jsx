@@ -17,17 +17,17 @@ const Thaiwanpurchase = () => {
     const Pizza = [
         {
             id: '1',
-            image: require('../assets/images/food3.png'),
+            image: require('../assets/images/food3.jpg'),
             title: 'Margherita'
         },
         {
             id: '2',
-            image: require('../assets/images/food1.png'),
+            image: require('../assets/images/food1.jpg'),
             title: 'Pepperoni'
         },
         {
             id: '3',
-            image: require('../assets/images/food6.png'),
+            image: require('../assets/images/food6.jpg'),
             title: 'Quattro Stagioni'
         },
     ]

@@ -70,7 +70,7 @@ const Deliveryaddress = () => {
                     />
                 </View>
 
-                <TouchableOpacity style={styles.step2}>
+                <TouchableOpacity style={styles.step2} onPress={handleUseCurrentLocation}>
                     <View style={styles.step2Sub}>
                         <Image source={require('../assets/icons/Star1.png')} style={styles.Star1} />
                     </View>

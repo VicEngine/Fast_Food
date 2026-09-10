@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "Fastfood",
+    "name": "Buger King",
     "slug": "owooluwaabass",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/assets/icon.png",
+    "icon": "./src/assets/images/logo2.jpg",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {

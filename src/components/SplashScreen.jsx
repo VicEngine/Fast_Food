@@ -5,12 +5,12 @@ export default function SplashScreen() {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../assets/images/logo2.jfif')}
+        source={require('../assets/images/logo2.jpg')}
         style={styles.image}
         resizeMode="contain"
       />
-      <Text style={styles.title}>Foodie</Text>
-      <Text style={styles.subtitle}>Loading your next meal</Text>
+      <Text style={styles.title}>Buger King</Text>
+      {/* <Text style={styles.subtitle}>Loading your next meal</Text> */}
       <ActivityIndicator size="large" color="#f97316" style={styles.loader} />
     </View>
   );
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontWeight: '700',
-    color: '#111827',
+    color: "#B72245",
     marginBottom: 8,
   },
   subtitle: {

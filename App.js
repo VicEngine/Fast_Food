@@ -20,7 +20,7 @@ export default function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSplash(false);
-    }, 1800);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);

@@ -26,6 +26,18 @@
     "web": {
       "favicon": "./src/assets/favicon.png"
     },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermissions": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ]
+    ],
+    "permissions": [
+      "ACCESS_FINE_LOCATION",
+      "ACCESS_COARSE_LOCATION"
+    ],
     "extra": {
       "eas": {
         "projectId": "0877a635-481b-404b-89e4-3ca7ba61f25b"

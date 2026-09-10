@@ -7,6 +7,7 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 const Checkout = () => {
   const [payment, setPayment] = useState(false)
+  const [selectedPayment, setSelectedPayment] = useState(0) // 0 = card1, 1 = email, 2 = card2
   const navigation = useNavigation()
 
   const handleContinueShopping = () => {
@@ -39,17 +40,17 @@ const Checkout = () => {
 
       <Text style={styles.title2}>PAYMENT METHOD</Text>
 
-      <TouchableOpacity activeOpacity={0.7} style={styles.step3}>
+      <TouchableOpacity activeOpacity={0.7} onPress={() => setSelectedPayment(0)} style={[styles.step3, selectedPayment === 0 && styles.step3Active]}>
         <Image source={require('../assets/images/pic14.png')} />
         <Text style={styles.title4}>*** **** **** 5967</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.step3}>
+      <TouchableOpacity onPress={() => setSelectedPayment(1)} style={[styles.step3, selectedPayment === 1 && styles.step3Active]}>
         <Image source={require('../assets/images/pic15.png')} />
         <Text style={styles.title4}>wilson.casper@bernice.info</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.step3}>
+      <TouchableOpacity onPress={() => setSelectedPayment(2)} style={[styles.step3, selectedPayment === 2 && styles.step3Active]}>
         <Image source={require('../assets/images/pic16.png')} />
         <Text style={styles.title4}>*** **** **** 3461</Text>
       </TouchableOpacity>
@@ -59,6 +60,7 @@ const Checkout = () => {
           <Text style={styles.title5}>Payment</Text>
         </TouchableOpacity>
       </View>
+
       <Modal visible={payment} animationType='fade' onRequestClose={() => setPayment(false)} transparent={true}>
 
         <View onPress={() => setPayment(false)} style={styles.Overlay}>
@@ -145,7 +147,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 18
+    gap: 18,
+    borderWidth: 2,
+    borderColor: 'transparent'
+  },
+  step3Active: {
+    backgroundColor: '#fff',
+    borderColor: '#F7931E',
+    elevation: 3,
+    shadowOpacity: 0.2,
+    shadowOffset: { width: 0, height: 2 }
   },
   title3: {
     fontSize: 15,

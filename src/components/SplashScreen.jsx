@@ -4,11 +4,11 @@ import { ActivityIndicator, Image, StyleSheet, Text, View } from 'react-native';
 export default function SplashScreen() {
   return (
     <View style={styles.container}>
-      {/* <Image
+      <Image
         source={require('../assets/images/logo2.jfif')}
         style={styles.image}
         resizeMode="contain"
-      /> */}
+      />
       <Text style={styles.title}>Foodie</Text>
       <Text style={styles.subtitle}>Loading your next meal</Text>
       <ActivityIndicator size="large" color="#f97316" style={styles.loader} />

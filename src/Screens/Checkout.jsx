@@ -121,10 +121,10 @@ const styles = StyleSheet.create({
   step1: {
     width: '100%',
     height: 40,
-    backgroundColor: '#fff',
+    backgroundColor: '#f8f8f8',
     marginTop: 25,
-    shadowOpacity: 0.3,
-    shadowOffset: { width: 0.3, height: 0.3 }
+    shadowOpacity: 0.4,
+    shadowOffset: { width: 0.4, height: 0.4 }
 
   },
   step2: {
